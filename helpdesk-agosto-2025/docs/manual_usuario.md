@@ -678,7 +678,7 @@ Como USER no puedes. Si el problema persiste:
 Si tienes problemas técnicos con el sistema o necesitas ayuda adicional, contacta a tu administrador del sistema.
 
 **Versión del Manual:** 1.0  
-**Última actualización:** Diciembre 2024
+**Última actualización:** Diciembre 2025
 
 ---
 

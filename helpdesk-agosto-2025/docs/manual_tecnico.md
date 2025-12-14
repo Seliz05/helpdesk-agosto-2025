@@ -1106,7 +1106,7 @@ MIT
 ## 📞 Información del Proyecto
 
 **Versión:** 1.0  
-**Última actualización:** Diciembre 2024  
+**Última actualización:** Diciembre 2025  
 **Repositorio:** https://github.com/Seliz05/-helpdesk-agosto-2025 
 **Documentación completa:** Ver `manual_tecnico.md`  
 **Diagrama ER:** Ver `er_diagram.png`
