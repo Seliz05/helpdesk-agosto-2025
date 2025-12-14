@@ -515,20 +515,30 @@ Flash message: "Ticket actualizado."
 ## 6. Estructura del Proyecto
 
 ```
-helpdesk/
+helpdesk-agosto-2025/
 │
 ├── app.py                      # Aplicación principal Flask
 ├── config.py                   # Configuración de la app
 ├── requirements.txt            # Dependencias Python
 ├── generate_hash.py            # Utilidad para generar hashes
 ├── db_init.sql                 # Script de inicialización BD
-├── er_diagram.png              # Diagrama Entidad-Relación
 ├── .env                        # Variables de entorno (NO SUBIR)
 ├── .gitignore                  # Archivos a ignorar en Git
 ├── README.md                   # Documentación básica
-├── manual_tecnico.md           # Este documento
+├── manual_tecnico.md
+├── doc/ 
+│   ├── er_diagram.png          # Diagrama Entidad-Relación
+│   ├── manual_usuario.md       # Manual de usuario
+│   ├── manual_tecnico.md       # Manual técnico
+│   └── screenshots/            # Capturas
+│       ├── login.png           # Página de login
+│       ├── dashboard.png       # Dashboard principal
+│       ├── dashboard02.png     # Dashboard principal de ADMIN
+│       ├── tickets_list.png    # Lista de tickets
+│       ├── ticket_detail.png   # Detalle de ticket
+│       └── users_list.png      # Gestión de usuarios           
 │
-├── templates/                  # Plantillas HTML (Jinja2)
+├── templates/                 # Plantillas HTML (Jinja2)
 │   ├── base.html              # Plantilla base con navbar
 │   ├── login.html             # Página de login
 │   ├── dashboard.html         # Dashboard principal
