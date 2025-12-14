@@ -1,0 +1,5 @@
+#requerimientos que se necesitan instalar pip install flask pymysql python-dotenv Werkzeug
+Flask==2.3.3
+pymysql==1.0.3
+python-dotenv==1.0.0
+Werkzeug==2.3.7

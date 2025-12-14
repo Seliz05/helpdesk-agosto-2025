@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-4">
+  <h3>Welcome, {{ session.user_name }}!</h3>
+  <p>Your role: <strong>{{ session.user_role }}</strong></p>
+  <div class="row mt-4">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Quick Actions</h5>
+          <a href="{{ url_for('tickets_list') }}" class="btn btn-primary me-2">View Tickets</a>
+          <a href="{{ url_for('ticket_new') }}" class="btn btn-success">New Ticket</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- ============= ÁREA PARA ESTADÍSTICAS SIMPLES ============= -->
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Ticket Statistics</h5>
+          
+          <!-- Solo la tabla de tickets por estado (como pide el PDF) -->
+          <div class="mt-2">
+            <h6>Tickets by Status</h6>
+            <table class="table table-sm table-bordered">
+              <thead class="table-light">
+                <tr>
+                  <th>Status</th>
+                  <th class="text-center">Count</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for stat in stats.status_stats %}
+                <tr>
+                  <td>
+                    <span class="badge 
+                      {% if stat.status == 'OPEN' %}bg-warning
+                      {% elif stat.status == 'IN_PROGRESS' %}bg-info
+                      {% else %}bg-success{% endif %}">
+                      {{ stat.status }}
+                    </span>
+                  </td>
+                  <td class="text-center fw-bold">{{ stat.count }}</td>
+                </tr>
+                {% endfor %}
+                <tr class="table-primary">
+                  <td><strong>Total</strong></td>
+                  <td class="text-center fw-bold">{{ stats.total_tickets }}</td>
+                </tr>
+              </tbody>
+            </table>
+            
+            <!-- Información adicional compacta -->
+            <div class="row mt-3">
+              <div class="col-6">
+                <div class="alert alert-info p-2 mb-0">
+                  <small class="d-block">My Tickets</small>
+                  <strong class="h5">{{ stats.my_tickets }}</strong>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="alert alert-secondary p-2 mb-0">
+                  <small class="d-block">Total</small>
+                  <strong class="h5">{{ stats.total_tickets }}</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ============= FIN ÁREA DE ESTADÍSTICAS ============= -->
+  </div>
+</div>
+{% endblock %}
