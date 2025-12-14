@@ -95,41 +95,43 @@ Administración: docs/screenshots/users_list.png
 📁 Estructura del Proyecto
 helpdesk-agosto-2025/
 │
-├── app.py                      # Aplicación principal Flask
-├── config.py                   # Configuración de la app
-├── requirements.txt            # Dependencias Python
-├── generate_hash.py            # Utilidad para generar hashes
-├── db_init.sql                 # Script de inicialización BD
-├── .env                        # Variables de entorno (NO SUBIR)
-├── .gitignore                  # Archivos a ignorar en Git
-├── README.md                   # Documentación básica
-├── manual_tecnico.md
 ├── doc/ 
-│   ├── er_diagram.png          # Diagrama Entidad-Relación
-│   ├── manual_usuario.md       # Manual de usuario
+│   ├── screenshots/            # Capturas
+│   │   ├── login.png           # Página de login
+│   │   ├── dashboard.png       # Dashboard principal
+│   │   ├── dashboard02.png     # Dashboard principal de ADMIN
+│   │   ├── tickets_list.png    # Lista de tickets
+│   │   ├── ticket_detail.png   # Detalle de ticket
+│   │   └── users_list.png      # Gestión de usuarios
+│   │
+│   ├── er_diagram.png          # Diagrama Entidad-Relación   
 │   ├── manual_tecnico.md       # Manual técnico
-│   └── screenshots/            # Capturas
-│       ├── login.png           # Página de login
-│       ├── dashboard.png       # Dashboard principal
-│       ├── dashboard02.png     # Dashboard principal de ADMIN
-│       ├── tickets_list.png    # Lista de tickets
-│       ├── ticket_detail.png   # Detalle de ticket
-│       └── users_list.png      # Gestión de usuarios           
+│   └── manual_usuario.md       # Manual de usuario
+│   
 │
+├── static/                     # Archivos estáticos
+│   ├── css/
+│   │   └── custom.css         # Estilos personalizados
+│   └── js/
+│       └── main.js            # JavaScript personalizado
+│  
 ├── templates/                 # Plantillas HTML (Jinja2)
 │   ├── base.html              # Plantilla base con navbar
-│   ├── login.html             # Página de login
 │   ├── dashboard.html         # Dashboard principal
-│   ├── tickets_list.html      # Lista de tickets
+│   ├── login.html             # Página de login
 │   ├── ticket_detail.html     # Detalle de ticket
 │   ├── ticket_new.html        # Formulario nuevo ticket
+│   ├── tickets_list.html      # Lista de tickets
 │   └── users_list.html        # Gestión de usuarios
 │
-└── static/                     # Archivos estáticos
-    ├── css/
-    │   └── custom.css         # Estilos personalizados
-    └── js/
-        └── main.js            # JavaScript personalizado
+├── .env                        # Variables de entorno (NO SUBIR)
+├── .gitignore                  # Archivos a ignorar en Git
+├── app.py                      # Aplicación principal Flask
+├── config.py                   # Configuración de la app
+├── db_init.sql                 # Script de inicialización BD
+├── generate_hash.py            # Utilidad para generar hashes
+├── requirements.txt            # Dependencias Python
+└── README.md                   # Documentación básica
 
 ❓ Problemas Comunes
 
